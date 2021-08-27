@@ -1,1 +1,54 @@
+CODIGO 1 
+#!/bin/bash
+#autor: luis rodrigues
+#descriçao : pedir nome ao usuario e depois fazer a soma dos nomes e quando a pessoa digitar um algoritimo nulo (em branco )
+ acaba o loop
+ 
+i=0
+nome=" "
+    echo "digite b para parar loop"
+    while [[ $nome != "b" ]]
+    do
+        echo "digite um nome"
+        read nome
+        echo "seu nome é $nome"
+        vetor[$i]=nome
+        i=$((i+1))
+    done
+    tamanhov=$((${#vetor[@]} -1))
+echo "tamanho é : $tamanhov " 
+___________________________________________________________________
 
+CODIGO 2 
+#!/bin/bash
+#autor : luis rodrigues
+#descriçao: fazer um loop com 3 nomes ecolhidos usando o while
+
+nome=("jack" "maria" "ana")
+
+i=0
+while [ $i -le ${#nome[@]} ]
+do
+    echo "oi, eu sou ${nome[$i]}"
+    i=$((i+1))
+done 
+-------------------------------------------------------------------
+
+CODIGO 3
+#!/bin/bash
+# autor :luis eduardo
+# descriçao : aqui esta mostrando se voce pode ou nao votar 
+echo "digite o numero 1 se voce for  nascio entre 2000 2 2005
+digite 2 se voce for nascido entre 2006 e 2010
+digite 3 se voce for nascido em 2011 para cima"
+read x
+case "$x" in
+   1) 
+    echo "voce pode votar"
+    ;;
+   2)
+    echo "voce ainda nao pode votar"
+     ;; 
+   3)
+    echo "voe ainda nao pode votar"
+esac   
